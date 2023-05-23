@@ -40,8 +40,7 @@ training_args = TrainingArguments(
     per_device_eval_batch_size=50, # update to suit your available resources
     save_steps=10_000,
     save_total_limit=2,
-    prediction_loss_only=True,
-    device='cuda'
+    prediction_loss_only=True
 )
 
 # Initialize Trainer
