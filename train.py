@@ -19,7 +19,7 @@ class MyDataset(Dataset):
         self.lines=[]
         for filename in os.scandir(path):
             if filename.is_file():
-                self.lines.append(open(filename,encoding='utf-8').readlines())
+                self.lines.append(open(filename,errors='replace').readlines())
 
     def __getitem__(self, idx):
         encoding = tokenizer(self.lines[idx], truncation=True, padding='max_length', return_tensors='pt')
