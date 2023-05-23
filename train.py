@@ -16,6 +16,7 @@ tokenizer = FunnelTokenizerFast.from_pretrained("funnel-transformer/small")
 # Define your training and validation datasets
 class MyDataset(Dataset):
     def __init__(self, path):
+        self.lines=[]
         for filename in os.scandir(path):
             if filename.is_file():
                 self.lines.append(open(filename).readlines())
