@@ -4,8 +4,8 @@ from transformers import FunnelForMaskedLM, FunnelTokenizerFast, Trainer, Traini
 import os
 
 # Assuming you have your training and validation data in txt format
-train_path = 'babylm_data\babylm_10M'
-val_path = 'babylm_data\babylm_dev'
+train_path = 'babylm_data/babylm_10M'
+val_path = 'babylm_data/babylm_dev'
 
 # Instantiate the model and tokenizer
 model = FunnelForMaskedLM.from_pretrained("funnel-transformer/small")
